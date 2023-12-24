@@ -1,0 +1,11 @@
+@mixin tablet{
+    @media (width > 768px){
+        @content;
+    }
+}
+
+@mixin screen{
+    @media(width > 1440px){
+        @content;
+    }
+}

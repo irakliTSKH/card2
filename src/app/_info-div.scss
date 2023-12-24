@@ -1,0 +1,121 @@
+.info-div {
+  margin-top: 30px;
+  text-wrap: nowrap;
+  font-size: 12px;
+  h3 {
+    color: grey;
+  }
+  .info-names {
+    margin-top: 14px;
+    display: flex;
+    .list-names {
+      margin-right: 10px;
+      font-weight: 700;
+      li {
+        display: flex;
+        margin-bottom: 12px;
+        img {
+          width: 10px;
+          height: 12px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .list-litr {
+      li {
+        display: flex;
+        margin-bottom: 12px;
+        p {
+          margin-right: 5px;
+          flex: 1;
+          text-align: left;
+          font-weight: 700;
+        }
+        span {
+          flex: 1;
+        }
+      }
+    }
+  }
+  .icons {
+    margin-top: 12px;
+    img {
+      margin-right: 16px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  }
+  @include tablet {
+    font-size: 14px;
+    margin-top: 0;
+    padding-left: 36px;
+    border-left: 0.3px solid rgba(grey, 0.5);
+    h3{
+        font-size: 12px;
+    }
+    .info-names{
+        margin-top: 25px;
+        .list-names{
+            margin-right: 16px;
+            li{
+                margin-bottom: 15px;
+                img{
+                    margin-right: 8px;
+                }
+            }
+        }
+        .list-litr {
+            li {
+              margin-bottom: 15px;
+              p{
+                margin-right: 10px;
+              }
+            }
+          }
+    }
+    .icons {
+        margin-top: 24px;
+        img {
+          margin-right: 16px;
+        }
+      }
+  }
+
+  @include screen {
+    font-size: 18px;
+    padding-left: 76px;
+    h3{
+        font-size: 16px;
+    }
+    .info-names{
+        margin-top: 50px;
+        .list-names{
+            margin-right: 32px;
+            li{
+                margin-bottom: 24px;
+                img{
+                    margin-right: 16px;
+                }
+            }
+        }
+        .list-litr {
+            li {
+              margin-bottom: 24px;
+              p{
+                margin-right: 16px;
+              }
+            }
+          }
+    }
+    .icons {
+        margin-top: 24px;
+        img {
+          margin-right: 32px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+  }
+}
