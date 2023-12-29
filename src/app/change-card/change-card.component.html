@@ -1,7 +1,10 @@
 <main
   [ngStyle]="isVisibleCardChange ? { display: 'block' } : { display: 'none' }"
 >
-  <div [ngStyle]="chooseTypeDiv ? { display: 'block' } : { display: 'none' }" class="choose-type">
+  <div
+    [ngStyle]="chooseTypeDiv ? { display: 'block' } : { display: 'none' }"
+    class="choose-type"
+  >
     <div class="x">
       <img
         src="../../assets/Vector.png"
@@ -21,25 +24,24 @@
             value="standart"
             #standart
             (change)="selectCardType(standart.value)"
-            />
+          />
           <label for="standart">სტანდარტული</label>
         </li>
 
         <li>
           <input
-           type="radio"
+            type="radio"
             id="fleet"
             name="cardType"
             value="fleet"
             #fleet
             (change)="selectCardType(fleet.value)"
-           />
+          />
           <label for="fleet">fleet</label>
         </li>
       </form>
     </ul>
 
-    <!-- label does not work -->
     <ul class="checkbox">
       <li>
         <input type="checkbox" id="super" />
@@ -72,7 +74,10 @@
     </div>
   </div>
 
-  <div [ngStyle]="typeStandart ? {display: 'block'} : {display: 'none'}" class="standart-type">
+  <div
+    [ngStyle]="typeStandart ? { display: 'block' } : { display: 'none' }"
+    class="standart-type"
+  >
     <div class="x">
       <img
         src="../../assets/Vector.png"
@@ -85,7 +90,10 @@
     <p>განხორციელდა ბარათის ტიპის ცვლილება.</p>
   </div>
 
-  <div [ngStyle]="typeFleet ? {display: 'block'} : {display: 'none'}"  class="fleet">
+  <div
+    [ngStyle]="typeFleet ? { display: 'block' } : { display: 'none' }"
+    class="fleet"
+  >
     <div class="x">
       <img
         src="../../assets/Vector.png"

@@ -6,10 +6,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './fuel-change.component.html',
-  styleUrl: './fuel-change.component.scss'
+  styleUrl: './fuel-change.component.scss',
 })
 export class FuelChangeComponent {
-
   @Input() isVisibleFuel: boolean = false;
 
   @Output() toggle = new EventEmitter<void>();

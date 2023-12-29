@@ -12,7 +12,6 @@ export class HiddenDivsComponent {
   @Input() isVisibleCard: boolean = false;
 
   @Output() toggle = new EventEmitter<void>();
-  // @Output() blockCardChange = new EventEmitter<boolean>();
 
   beforeBlock: boolean = true;
   blockMessage: boolean = false;
@@ -37,7 +36,5 @@ export class HiddenDivsComponent {
     this.unblockCard = false;
     this.beforeBlock = true;
     this.toggleVisibilityCard();
-
-    // this.blockCardChange.emit(this.unblockCard);
   }
 }

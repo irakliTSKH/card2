@@ -5,9 +5,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-change-card',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './change-card.component.html',
-  styleUrl: './change-card.component.scss'
+  styleUrl: './change-card.component.scss',
 })
 export class ChangeCardComponent {
   @Input() isVisibleCardChange: boolean = false;
@@ -18,15 +18,14 @@ export class ChangeCardComponent {
   typeStandart: boolean = false;
   typeFleet: boolean = false;
   chooseTypeDiv: boolean = true;
-  
 
   toggleVisibilityCardChange(): void {
     this.isVisibleCardChange = !this.isVisibleCardChange;
     this.toggle.emit();
   }
 
-  selectCardType(value: string): void{
-     this.cardTypeValue = value;
+  selectCardType(value: string): void {
+    this.cardTypeValue = value;
   }
 
   chooseTypeafter(): void {
@@ -34,16 +33,14 @@ export class ChangeCardComponent {
     this.typeFleet = false;
     this.typeStandart = false;
   }
-  
 
-  changeType(): void{
-    if(this.cardTypeValue === 'standart'){
-      this.chooseTypeDiv = !this.chooseTypeDiv
+  changeType(): void {
+    if (this.cardTypeValue === 'standart') {
+      this.chooseTypeDiv = !this.chooseTypeDiv;
       this.typeStandart = true;
-    } else if (this.cardTypeValue === 'fleet'){
-      this.chooseTypeDiv = !this.chooseTypeDiv
+    } else if (this.cardTypeValue === 'fleet') {
+      this.chooseTypeDiv = !this.chooseTypeDiv;
       this.typeFleet = true;
     }
   }
-
 }
