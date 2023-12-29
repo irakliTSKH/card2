@@ -1,4 +1,24 @@
 <div class="wrapper">
+
+<app-hidden-divs 
+[isVisibleCard]="isVisibleCard" 
+(toggle)="toggleVisibilityCard()" 
+>
+<!-- (blockCardChange)="onBlockCardChange($event)" -->
+</app-hidden-divs>
+
+<app-fuel-change
+[isVisibleFuel]="isVisibleFuel"
+(toggle)="toggleVisibilityFuel()" 
+>
+</app-fuel-change>
+
+<app-change-card
+  [isVisibleCardChange]="isVisibleCardChange"
+  (toggle)="toggleVisibilityCardChange()" 
+  >
+</app-change-card>
+
   <div class="card">
     <nav>
       <ul>
@@ -13,6 +33,7 @@
     <section>
       <div class="card-div">
         <img src="../assets/card-info.png" alt="socar-card" />
+
       </div>
 
       <div class="info-div">
@@ -50,9 +71,15 @@
         </div>
 
         <div class="icons">
-          <img src="../assets/icon1.png" alt="icon" />
-          <img src="../assets/icon2.png" alt="icon" />
-          <img src="../assets/icon3.png" alt="icon" />
+          <div class="unblock"  (click)="toggleVisibilityCard()">
+            <img src="../assets/icon1.png" alt="icon" />
+          </div>
+          <div class="fuel-change" (click)="toggleVisibilityFuel()">
+            <img src="../assets/icon2.png" alt="icon" />
+          </div>
+          <div class="card-change" (click)="toggleVisibilityCardChange()">
+            <img src="../assets/icon3.png" alt="icon" />
+          </div>
         </div>
       </div>
     </section>

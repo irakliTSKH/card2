@@ -39,83 +39,115 @@
   }
   .icons {
     margin-top: 12px;
-    img {
+    div {
+      display: inline-block;
       margin-right: 16px;
       width: 30px;
       height: 30px;
       cursor: pointer;
       border-radius: 8px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
+
+
+
   @include tablet {
     font-size: 14px;
     margin-top: 0;
     padding-left: 36px;
     border-left: 0.3px solid rgba(grey, 0.5);
-    h3{
-        font-size: 12px;
+    h3 {
+      font-size: 12px;
     }
-    .info-names{
-        margin-top: 25px;
-        .list-names{
-            margin-right: 16px;
-            li{
-                margin-bottom: 15px;
-                img{
-                    margin-right: 8px;
-                }
-            }
-        }
-        .list-litr {
-            li {
-              margin-bottom: 15px;
-              p{
-                margin-right: 10px;
-              }
-            }
+    .info-names {
+      margin-top: 25px;
+      .list-names {
+        margin-right: 16px;
+        li {
+          margin-bottom: 15px;
+          img {
+            margin-right: 8px;
           }
-    }
-    .icons {
-        margin-top: 24px;
-        img {
-          margin-right: 16px;
         }
       }
+      .list-litr {
+        li {
+          margin-bottom: 15px;
+          p {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .icons {
+      margin-top: 24px;
+      div {
+        margin-right: 16px;
+        position: relative;
+        display: inline-block;
+        font-size: 10px;
+      }
+      .unblock{
+        @include before-after-tablet('ბარათის დაბლოკვა');
+      }
+      .fuel-change{
+       @include before-after-tablet('საწვავის ტიპის ცვლილება');
+      }
+      .card-change{
+       @include before-after-tablet('ბარათის ტიპის ცვლილება');
+      }
+    }
   }
-
+ 
   @include screen {
     font-size: 18px;
     padding-left: 76px;
-    h3{
-        font-size: 16px;
+    h3 {
+      font-size: 16px;
     }
-    .info-names{
-        margin-top: 50px;
-        .list-names{
-            margin-right: 32px;
-            li{
-                margin-bottom: 24px;
-                img{
-                    margin-right: 16px;
-                }
-            }
-        }
-        .list-litr {
-            li {
-              margin-bottom: 24px;
-              p{
-                margin-right: 16px;
-              }
-            }
+    .info-names {
+      margin-top: 50px;
+      .list-names {
+        margin-right: 32px;
+        li {
+          margin-bottom: 24px;
+          img {
+            margin-right: 16px;
           }
-    }
-    .icons {
-        margin-top: 24px;
-        img {
-          margin-right: 32px;
-          width: 40px;
-          height: 40px;
         }
       }
+      .list-litr {
+        li {
+          margin-bottom: 24px;
+          p {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+    .icons {
+      margin-top: 24px;
+      div {
+        width: 40px;
+        height: 40px;
+        margin-right: 32px;
+        display: inline-block;
+        position: relative;
+        font-size: 16px;
+      }
+      .unblock{
+        @include before-after-screen('ბარათის განბლოკვა');
+      }
+      .fuel-change{
+        @include before-after-screen('საწვავის ტიპის ცვლილება');
+      }
+      .card-change{
+        @include before-after-screen('ბარათის ტიპის ცვლილება');
+      }
+    }
   }
 }

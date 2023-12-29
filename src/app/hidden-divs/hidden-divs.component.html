@@ -1,0 +1,53 @@
+<main [ngStyle]="isVisibleCard ? { display: 'flex' } : { display: 'none' }">
+  <div
+    class="before-block card"
+    [ngStyle]="beforeBlock ? { display: 'block' } : { display: 'none' }"
+  >
+    <div class="x">
+      <img src="../../assets/Vector.png" alt="X" (click)="toggleVisibilityCard()" />
+    </div>
+    <h3>ბარათის დაბლოკვა</h3>
+    <p>
+      თქვენ ახორციელებთ ბარათის ბლოკირებას, რა დროსაც ვეღარ შეძლებთ ბარათზე
+      საწვავის დასმას და ავტო გასამართ სადგურებზე მის გამოყენებას.
+    </p>
+    <p>ნამდვილად გსურთ ბარათის დაბლოკვა?</p>
+    <div class="buttons">
+      <button (click)="toggleVisibilityCard()">არა</button>
+      <button (click)="block()">დიახ</button>
+    </div>
+  </div>
+
+  <div
+    class="block-message card"
+    [ngStyle]="blockMessage ? { display: 'block' } : { display: 'none' }"
+  >
+    <div class="x">
+      <img
+        src="../../assets/Vector.png"
+        alt="X"
+        (click)="toggleVisibilityCard()"
+        (click)="showUnBlockMessage()"
+      />
+    </div>
+    <h3>შეტყობინება</h3>
+    <p>
+      გთხოვთ, ბარათზე არსებული ბალანსი გადაიტანოთ ძირითად ანგარიშზე წინააღმდეგ
+      შემთხვევაში ვერ მოხდება ბარათის ბლოკირება.
+    </p>
+  </div>
+
+  <div
+    class="unblock-card card"
+    [ngStyle]="unblockCard ? { display: 'block' } : { display: 'none' }"
+  >
+    <div class="x">
+      <img src="../../assets/Vector.png" alt="X" (click)="toggleVisibilityCard()" />
+    </div>
+    <p>თქვენ ახორციელებთ ბარათის განბლოკვას.</p>
+    <div class="buttons">
+      <button (click)="toggleVisibilityCard()">არა</button>
+      <button (click)="unBlock()">დიახ</button>
+    </div>
+  </div>
+</main>

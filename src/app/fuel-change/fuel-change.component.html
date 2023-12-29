@@ -1,0 +1,49 @@
+<main [ngStyle]="isVisibleFuel ? { display: 'flex' } : { display: 'none' }">
+    <div class="wrapper">
+        <div class="x">
+            <img src="../../assets/Vector.png" alt="X" (click)="toggleVisibilityFuel()" />
+        </div>
+        <h3>საწვავის ტიპის ცვლილება</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="super">
+                <label for="super">ნანო სუპერი</label>
+            </li>
+            <li>
+                <input type="checkbox" id="premium">
+                <label for="premium">ნანო პრემიუმი</label>
+            </li>
+            <li>
+                <input type="checkbox" id="evroRegular">
+                <label for="evroRegular">ნანო ევრო რეგულარი</label>
+            </li>
+            <li>
+                <input type="checkbox" id="diesel">
+                <label for="diesel">ნანო დიზელი</label>
+            </li>
+            <li>
+                <input type="checkbox" id="evroRegular">
+                <label for="evroRegular">ნანო ევრო დიზელი</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cng">
+                <label for="cng">ბუნებრივი აირი(CNG)</label>
+            </li>
+        </ul>
+
+        <div class="buttons">
+            <button (click)="toggleIsVisibleMessage()">შენახვა</button>
+            <button (click)="toggleVisibilityFuel()">გაუქმება</button>
+        </div>
+    </div>
+
+    <div class="message-wrapper" [ngStyle]="isVisibleMessage ? { display: 'block'} : { display: 'none'}">
+        <div class="message">
+            <div class="x">
+                <img src="../../assets/Vector.png" alt="X" (click)="toggleIsVisibleMessage()" />
+            </div>
+            <p>გთხოვთ, ბარათზე არსებული ბალანსი გაანულეთ, 
+                წინააღმდეგ შემთხვევაში ვერ მოხდება საწვავის ტიპის ცვლილება</p>
+        </div>
+    </div>
+</main>
